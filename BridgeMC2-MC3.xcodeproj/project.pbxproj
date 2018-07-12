@@ -15,6 +15,9 @@
 		66B098D420F76EEB00C2058A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66B098D220F76EEB00C2058A /* LaunchScreen.storyboard */; };
 		66B098DF20F76EEB00C2058A /* BridgeMC2_MC3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B098DE20F76EEB00C2058A /* BridgeMC2_MC3Tests.swift */; };
 		66B098EA20F76EEB00C2058A /* BridgeMC2_MC3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B098E920F76EEB00C2058A /* BridgeMC2_MC3UITests.swift */; };
+		66B098F820F7977E00C2058A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B098F720F7977E00C2058A /* RegisterViewController.swift */; };
+		66B098FA20F7978700C2058A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B098F920F7978700C2058A /* SignInViewController.swift */; };
+		66B098FC20F7979400C2058A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B098FB20F7979400C2058A /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		66B098E520F76EEB00C2058A /* BridgeMC2-MC3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BridgeMC2-MC3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66B098E920F76EEB00C2058A /* BridgeMC2_MC3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeMC2_MC3UITests.swift; sourceTree = "<group>"; };
 		66B098EB20F76EEB00C2058A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66B098F720F7977E00C2058A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		66B098F920F7978700C2058A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		66B098FB20F7979400C2058A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				66B098C620F76EEA00C2058A /* AppDelegate.swift */,
 				66B098C820F76EEA00C2058A /* ViewController.swift */,
 				66B098CA20F76EEA00C2058A /* Main.storyboard */,
+				66B098F720F7977E00C2058A /* RegisterViewController.swift */,
+				66B098F920F7978700C2058A /* SignInViewController.swift */,
+				66B098FB20F7979400C2058A /* ProfileViewController.swift */,
 				66B098D020F76EEB00C2058A /* Assets.xcassets */,
 				66B098D220F76EEB00C2058A /* LaunchScreen.storyboard */,
 				66B098D520F76EEB00C2058A /* Info.plist */,
@@ -259,9 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66B098FC20F7979400C2058A /* ProfileViewController.swift in Sources */,
 				66B098C920F76EEA00C2058A /* ViewController.swift in Sources */,
 				66B098CF20F76EEA00C2058A /* BridgeMC2_MC3.xcdatamodeld in Sources */,
 				66B098C720F76EEA00C2058A /* AppDelegate.swift in Sources */,
+				66B098FA20F7978700C2058A /* SignInViewController.swift in Sources */,
+				66B098F820F7977E00C2058A /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

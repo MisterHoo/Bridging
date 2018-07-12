@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BridgeMC2_MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterViewController" customModule="BridgeMC2_MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,10 +72,16 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="1" green="0.056107677723830074" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dF2-0k-EJf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZ6-2P-p25">
                                         <rect key="frame" x="100" y="0.0" width="100" height="30"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hST-w8-Age"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -92,15 +98,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="uxN-mX-yUC" id="mC2-Bd-QYh"/>
+                        <outlet property="passwordTextField" destination="uxN-mX-yUC" id="W9P-kn-hBe"/>
+                        <outlet property="signUpButton" destination="oZ6-2P-p25" id="3y3-Nf-MKg"/>
+                        <outlet property="usernameTextField" destination="INT-a2-qNC" id="Qmg-76-Smz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign In View Controller-->
         <scene sceneID="Que-md-PhJ">
             <objects>
-                <viewController id="rEH-c6-ESb" sceneMemberID="viewController">
+                <viewController id="rEH-c6-ESb" customClass="SignInViewController" customModule="BridgeMC2_MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CWH-aM-xrE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,10 +156,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-aG-0iY">
                                         <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
                                         <state key="normal" title="Register"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="r6W-rc-gYB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNU-i0-WHK">
                                         <rect key="frame" x="125" y="0.0" width="125" height="30"/>
                                         <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="signInAction:" destination="rEH-c6-ESb" eventType="touchUpInside" id="7tS-93-zKp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -164,10 +182,72 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C5W-Wf-H5v"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="zV2-dJ-E2U" id="fV9-hQ-euw"/>
+                        <outlet property="usernameTextField" destination="eop-pj-qmp" id="Jsq-yq-eLa"/>
+                        <segue destination="aZz-Wz-znw" kind="show" identifier="SigninToProfile" id="TWR-zP-bOJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZN-Tq-rEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-583" y="134"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="XCy-vT-D3h">
+            <objects>
+                <viewController id="aZz-Wz-znw" customClass="ProfileViewController" customModule="BridgeMC2_MC3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sBd-VG-rIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-c8-8AY">
+                                <rect key="frame" x="37" y="124" width="300" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBj-Hg-g3C">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCq-5c-lzq">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="WdX-9F-sNi"/>
+                                    <constraint firstAttribute="height" constant="100" id="iMM-dC-Sus"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgp-t0-eRE">
+                                <rect key="frame" x="160" y="705" width="55" height="30"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" red="1" green="0.056107677723830074" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutAction:" destination="aZz-Wz-znw" eventType="touchUpInside" id="fvn-cF-TjF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bgp-c8-8AY" firstAttribute="centerX" secondItem="R6m-C1-Dpm" secondAttribute="centerX" id="4Kp-oW-0wc"/>
+                            <constraint firstItem="bgp-t0-eRE" firstAttribute="centerX" secondItem="R6m-C1-Dpm" secondAttribute="centerX" id="DWM-H6-bQW"/>
+                            <constraint firstItem="Bgp-c8-8AY" firstAttribute="top" secondItem="R6m-C1-Dpm" secondAttribute="top" constant="80" id="Gva-th-PVk"/>
+                            <constraint firstItem="R6m-C1-Dpm" firstAttribute="bottom" secondItem="bgp-t0-eRE" secondAttribute="bottom" constant="43" id="hBZ-lj-SbY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R6m-C1-Dpm"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="ZCq-5c-lzq" id="YaG-NO-zoo"/>
+                        <outlet property="usernameLabel" destination="WBj-Hg-g3C" id="piv-di-y2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJU-vk-3rG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="828"/>
         </scene>
     </scenes>
 </document>
